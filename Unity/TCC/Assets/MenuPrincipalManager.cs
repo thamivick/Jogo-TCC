@@ -1,17 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneMenagement;
+using UnityEngine.SceneManagement;
 
 public class MenuPrincipalManager : MonoBehaviour
 {
     [SerializeField] private string nomeDoLevelDeJogo;
     [SerializeField] private GameObject painelMenuInicial;
-    [SerializeField] private GameObject PainelOpcoes;
+    [SerializeField] private GameObject painelOpcoes;
 
     public void Jogar()
     {
-        ScaneManager.LoadScene("Jogo")
+        SceneManager.LoadScene(nomeDoLevelDeJogo);
     }
 
     public void abrirOpcoes()
@@ -22,12 +22,14 @@ public class MenuPrincipalManager : MonoBehaviour
 
     public void fecharOpcoes()
     {
-
+        painelOpcoes.SetActive(false);
+        painelMenuInicial.SetActive(true);
     }
 
     public void sairJogo()
     {
-
+        Debug.Log("Sair do Jogo");
+        Application.Quit();
     }
 }
 
