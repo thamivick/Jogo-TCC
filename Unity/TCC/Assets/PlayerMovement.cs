@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float velocity = 10.0f;
-    public float rotation = 90.0f;
+    public float velocity = 400.0f;
+    public float rotation = 180.0f;
 
     void Start(){
           Cursor.lockState = CursorLockMode.Locked;
